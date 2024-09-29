@@ -1,0 +1,34 @@
+@startuml findMostFrequentChars
+title findMostFrequentChars
+start
+: user input str;
+: str = str.toLowerCase();
+: arrStr =  str.split("");
+: MaxCount = 0; 
+: charDict = {};
+: result = [];
+: i = 0;
+repeat
+if (arrStr[i] in charDict) then (yes)
+    : charDict[arrStr[i]] += 1;
+else (no)
+    : charDict[arrStr[i]] = 1;
+endif
+: i++;
+repeat while (i < arrStr.length)
+
+repeat : (key in charDict.keys())
+if (charDict[key] > MaxCount) then (yes)
+    : MaxCount = charDict[key];
+endif
+repeat while (true)
+
+repeat : (key in charDict.keys())
+if (charDict[key] == MaxCount) then (yes)
+    : result.append(key);
+endif
+repeat while (true)
+
+: console.log(result);
+stop
+@enduml

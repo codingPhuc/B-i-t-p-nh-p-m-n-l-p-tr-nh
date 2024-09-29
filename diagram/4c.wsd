@@ -1,0 +1,14 @@
+
+
+@startuml.
+title checkPalindromeString
+start
+: user input str;
+
+: reverseStr = reverseString(str) ; 
+if ( reverseStr  ==  str)  then (yes)
+: return true ;  
+endif
+:  return false  ; 
+stop
+@enduml

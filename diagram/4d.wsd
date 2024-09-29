@@ -1,0 +1,21 @@
+@startuml 
+title findLongestPalindromicSubstring
+start
+: user input str;
+: longestPalindromic = '';
+: i = 0;
+repeat
+  : j = i;
+  : substring = '';
+  repeat
+    : substring = str.substring(i, j + 1);
+    if(checkPalindromeString(substring) && substring.length > longestPalindromic.length) then (yes)
+        : longestPalindromic = substring;
+    endif 
+    : j++;
+  repeat while (j < str.length) is (yes)
+  : i++;
+repeat while (i < str.length) is (yes)
+: return longestPalindromic; 
+stop
+@enduml

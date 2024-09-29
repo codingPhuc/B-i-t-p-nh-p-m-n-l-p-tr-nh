@@ -1,0 +1,23 @@
+@startuml
+start
+title  findPrimesInArray 
+: user input arr;
+: i = 0;
+repeat
+ :  isPrime = true  ; 
+  : j = 2;
+  repeat
+    if (arr[i] % j == 0) then (yes)
+      : break;
+    else (no)
+    endif
+    : j++;
+  repeat while (j <= Math.floor(arr[i] / 2)) is (yes)
+  if (isPrime  &&  arr[i] > 1) then (yes)
+    : console.log(arr[i]);
+  else (no)
+  endif
+  : i++;
+repeat while (i < arr.length) is (yes)
+stop
+@enduml

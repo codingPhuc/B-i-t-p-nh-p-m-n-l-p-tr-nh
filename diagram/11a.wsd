@@ -1,0 +1,14 @@
+
+@startuml findMaxIndex
+title findMaxIndex
+start
+: user input arr  ;
+: maxIndex =    0 ;  
+repeat:(for (let i = 1; i < arr.length; i++) )    
+      if( arr[i] > arr[maxIndex]) then (yes)
+        : maxIndex = i; 
+      endif 
+repeat while(true)
+:  return maxIndex; 
+stop
+@enduml

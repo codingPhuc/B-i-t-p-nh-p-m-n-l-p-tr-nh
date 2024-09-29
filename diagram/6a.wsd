@@ -1,0 +1,13 @@
+@startuml calculateAndPrintFactorial
+title calculateAndPrintFactorial
+start
+: user input n;
+: i = 1;
+: nFactorial = 1; 
+repeat
+: nFactorial = nFactorial * i; 
+: i++;
+repeat while (i <= n)
+: console.log(nFactorial);
+stop
+@enduml

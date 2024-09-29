@@ -1,0 +1,38 @@
+@startuml 
+title findLongestIncreasingAndDecreasingSubsequence
+start
+: user input str;
+: maxIncreasingSub = '' ;
+: maxDecreasingSub = '' ;
+repeat : for (let i = 0; i < str.length; i++)
+  : increasingSub = str[i];
+  : decreasingSub = str[i];
+
+  repeat : for (let j = i; j < str.length - 1; j++)
+    if (str[j] < str[j + 1]) then (yes)
+      : increasingSub += str[j + 1];
+    else (no)
+      if (maxIncreasingSub.length < increasingSub.length) then (yes)
+        : maxIncreasingSub = increasingSub;
+      endif
+      : increasingSub = str[j + 1];
+    endif
+  repeat while (true)
+   if (maxIncreasingSub.length < increasingSub.length) then (yes)
+      : maxIncreasingSub = increasingSub;
+    endif
+  repeat : for (let j = i; j < str.length - 1; j++)
+    if (str[j] > str[j + 1]) then (yes)
+      : decreasingSub += str[j + 1];
+    else (no)
+      if (maxDecreasingSub.length < decreasingSub.length) then (yes)
+        :           maxDecreasingSub = decreasingSub;
+      endif
+      :  decreasingSub = str[j + 1];
+    endif
+  repeat while (true)
+   if (maxDecreasingSub.length < decreasingSub.length) then (yes)
+      : maxDecreasingSub = decreasingSub;
+    endif
+repeat while (true)
+@enduml

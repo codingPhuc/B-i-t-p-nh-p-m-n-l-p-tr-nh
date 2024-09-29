@@ -1,0 +1,14 @@
+@startuml 
+    title   SumOfDigits 
+    start
+    :user input  n;
+    : sum =  0; 
+    :    = 0  ; 
+    repeat: lastDigit  =  n % 10;
+    : n  = Math.floor (n  / 10)  ; 
+    : sum  =  sum  + lastDigit  ;
+    repeat  while (n > 0 ) is(yes)
+    -> no ; 
+    :console.log(sum);
+    stop
+@enduml

@@ -1,0 +1,22 @@
+@startuml
+title printPrimesUpToN
+start
+: user input n;
+: i = 1;
+repeat
+  : j = 2;
+  repeat
+    if (i % j == 0) then (yes)
+      : break;
+    else (no)
+    endif
+    : j++;
+  repeat while (j <= Math.floor(i / 2)) is (yes)
+  if (j > Math.floor(i / 2)) then (yes)
+    : console.log(i);
+  else (no)
+  endif
+  : i++;
+repeat while (i <= n) is (yes)
+stop
+@enduml

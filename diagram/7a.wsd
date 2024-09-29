@@ -1,0 +1,14 @@
+@startuml
+title printFirstnFibonacciNumbers.
+start
+: user input n;
+: i = 0 ;
+: j =  1 ;
+repeat
+: temp  =  i + j   ;
+: console.log(i )  ;
+: i  =  j  ; 
+: j = temp  ; 
+repeat while ( i <= n )
+stop
+@enduml

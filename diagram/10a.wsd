@@ -1,0 +1,13 @@
+
+@startuml findGreatestCommonDivisor
+title findGreatestCommonDivisor
+start
+: user input a, b;
+repeat:(b  !== 0 )    
+     : temp =   b ; 
+    :b = a % b   ; 
+    : a = temp ; 
+repeat while(true)
+: return  a ; 
+stop
+@enduml

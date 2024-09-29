@@ -1,0 +1,18 @@
+@startuml countVowelsInString
+title countVowelsInString
+start
+: user input str;
+: str = str.toLowerCase();
+: arrStr = str.split();
+: vowels = ['a', 'e', 'i', 'o', 'u'];
+: numberOfVowels = 0;
+: i = 0;
+repeat
+if (vowels.includes(arrStr[i])) then (yes)
+    : numberOfVowels++;
+endif
+: i++;
+repeat while (i < arrStr.length)
+: console.log(numberOfVowels);
+stop
+@enduml

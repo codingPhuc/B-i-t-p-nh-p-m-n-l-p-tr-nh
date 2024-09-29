@@ -1,0 +1,17 @@
+@startuml 
+    title  findMaxInArray   
+    start
+    : user input arr;
+    : max = arr[0] ; 
+    : i  =  1  ;  
+    repeat 
+    if(arr[i] >  max  ) then (yes)
+        : max =  arr[i]  ; 
+    else (no) 
+    endif 
+    : i++   ;
+    repeat  while ( i < arr.length ) is(yes)
+    -> no ; 
+    :console.log(max);
+    stop
+@enduml

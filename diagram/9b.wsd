@@ -1,0 +1,16 @@
+@startuml findMostFrequentChars
+title sortString
+start
+: user input str;
+:  arr =  str.split('')  ; 
+repeat: for (let i = 1; i < arr.length; i++)   ; 
+: temp  =  arr[i]  ; 
+: j =  i  ; 
+repeat:(j > 0 && temp < arr[j - 1])    
+:arr[j] = arr[j - 1];
+      :j--;
+repeat while(true)
+repeat while (true)
+:return  arr.join(''); 
+stop
+@enduml

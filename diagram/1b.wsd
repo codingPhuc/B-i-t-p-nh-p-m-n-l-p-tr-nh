@@ -1,0 +1,16 @@
+@startuml 
+title  sumOfDivisors
+    start
+    :user input n ;
+    : sum =  0; 
+    : i = 0 ; 
+    repeat: i++ ;
+    if(n  % i == 0) then (yes)
+        : sum  =  sum  + i  ;
+    else (no) 
+    endif
+    repeat  while (i <= n) is(yes) 
+    -> no ; 
+    :console.log(sum);
+    stop
+@enduml

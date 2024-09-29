@@ -1,0 +1,12 @@
+
+@startuml findSum
+title findSum
+start
+: user input arr  ;
+: sumArr = 0; 
+repeat:(for (let i = 0; i < arr.length; i++)  )    
+    :sumArr += arr[i]; 
+repeat while(true)
+:  return sumArr; 
+stop
+@enduml

@@ -1,0 +1,14 @@
+
+@startuml findMinIndex
+title findMinIndex
+start
+: user input arr  ;
+: minIndex =    0 ;  
+repeat:(for (let i = 1; i < arr.length; i++) )    
+      if( arr[i] <  arr[minIndex]) then (yes)
+        : minIndex = i; 
+      endif 
+repeat while(true)
+:  return minIndex; 
+stop
+@enduml

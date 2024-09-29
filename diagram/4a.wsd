@@ -1,0 +1,15 @@
+
+@startuml.
+title reverseString
+start
+: user input str;
+: arrStr =  str.split('') ;
+: i = arrStr.length - 1 ;
+: reverseStr = '' ; 
+repeat
+ : reverseStr  +=  arrStr[i]   ;  
+  :i--  ; 
+repeat while (i >0 ) is (yes)
+: return  reverseStr ; 
+stop
+@enduml

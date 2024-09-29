@@ -1,0 +1,16 @@
+@startuml RemoveWhitespaceFromString
+title RemoveWhitespaceFromString
+start
+: user input str;
+:arrStr = str.split("");
+: i = 0;
+: noSpaceStr = ''; 
+repeat  
+  if (arrStr[i] != ' ') then (yes)
+    : noSpaceStr += arrStr[i];  
+  endif 
+  : i++;
+repeat while (i < arrStr.length) is (yes)
+: return noSpaceStr; 
+stop
+@enduml

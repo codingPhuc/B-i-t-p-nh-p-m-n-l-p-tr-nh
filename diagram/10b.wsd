@@ -1,0 +1,24 @@
+
+@startuml findGreatestCommonDivisor
+title findLeastCommonMultiple
+start
+: user input a, b;
+: i  =  2 ; 
+:  leastCommonMul = 1;    
+repeat: while (a != 1 && b != 1) 
+if ( primeNumberCheckAlgorithm(i) ) then ( yes)
+    repeat :  (a % i == 0  || b % i  == 0)    
+    if ( a % i  ==  0 ) 
+      :a = Math.floor(a / i);
+    endif  
+    if(b %  i  == 0  ) 
+      :b = Math.floor(b / i);
+    endif
+    :leastCommonMul *= i; 
+    repeat  while (true)   
+
+endif  
+:i++   ; 
+repeat while (true)
+stop
+@enduml

@@ -1,0 +1,15 @@
+
+@startuml findPrimesIn2DArray
+title findPrimesIn2DArray
+start
+: user input arr2D  ;
+: min = arr2D[0][0];
+repeat:for (let i = 0; i < arr2D.length; i++)   
+    repeat: for (let j = 0; j < arr2D[0].length; j++)   
+    if (primeNumberCheckAlgorithm(arr2D[i][j])) then (yes ) 
+        :console.log(arr2D[i][j]);
+    endif 
+repeat while(true)
+repeat while(true)
+stop
+@enduml
