@@ -1,34 +1,34 @@
 @startuml findMostFrequentChars
 title findMostFrequentChars
 start
-: user input str;
-: str = str.toLowerCase();
-: arrStr =  str.split("");
-: MaxCount = 0; 
-: charDict = {};
-: result = [];
-: i = 0;
+: Read stringArray;
+: stringArray assign value  stringArray.toLowerCase();
+: arrStr assign value   stringArray.split("");
+: MaxCount assign value  0; 
+: charDict assign value  {};
+: result assign value  [];
+: count assign value  0;
 repeat
-if (arrStr[i] in charDict) then (yes)
-    : charDict[arrStr[i]] += 1;
+if (arrStr[count] in charDict) then (yes)
+    : charDict[arrStr[count]] increment by  1;
 else (no)
-    : charDict[arrStr[i]] = 1;
+    : charDict[arrStr[count]] assign value  1;
 endif
-: i++;
-repeat while (i < arrStr.length)
+: count increment;
+repeat while (count smaller than  arrStr.length)
 
 repeat : (key in charDict.keys())
-if (charDict[key] > MaxCount) then (yes)
-    : MaxCount = charDict[key];
+if (charDict[key] larger than MaxCount) then (yes)
+    : MaxCount assign value  charDict[key];
 endif
 repeat while (true)
 
 repeat : (key in charDict.keys())
-if (charDict[key] == MaxCount) then (yes)
+if (charDict[key] equal to  MaxCount) then (yes)
     : result.append(key);
 endif
 repeat while (true)
 
-: console.log(result);
+: show the output of(result);
 stop
 @enduml

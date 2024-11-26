@@ -2,15 +2,15 @@
 @startuml  sumRowOrColumn
 title  sumRowOrColumn
 start
-: user input arr2D, k, isRow = true  ;
-:  sum =  0;
+: Read arr2D, k, isRow assign value  true  ;
+:  sum assign value   0;
 if (isRow) then (yes)  
-repeat:  for (let j = 0; j < arr2D[0].length; j++)
- :sum += arr2D[k][j]; 
+repeat:  for (let countColumn assign value  0; countColumn smaller than  arr2D[0].length; countColumn increment)
+ :sum increment by  arr2D[k][countColumn]; 
 repeat  while(true )
 else 
-repeat:  for (let i = 0; j < arr2D[0].length; j++)
-: sum += arr2D[i][k]; 
+repeat:  for (let countRow assign value  0; countColumn smaller than  arr2D[0].length; countColumn increment)
+: sum increment by  arr2D[countRow][k]; 
 repeat  while(true )
 endif 
  :return sum;

@@ -1,16 +1,16 @@
 @startuml findMostFrequentChars
 title sortString
 start
-: user input str;
-:  arr =  str.split('')  ; 
-repeat: for (let i = 1; i < arr.length; i++)   ; 
-: temp  =  arr[i]  ; 
-: j =  i  ; 
-repeat:(j > 0 && temp < arr[j - 1])    
-:arr[j] = arr[j - 1];
-      :j--;
+: Read stringArray;
+:  array assign value   stringArray.split('')  ; 
+repeat: for (let count assign value  1; count smaller than  array.length; count increment)   ; 
+: temp  assign value   array[count]  ; 
+: countColumn assign value   count  ; 
+repeat:(countColumn larger than 0 and  temp smaller than  array[countColumn  decrease by  1])    
+:array[countColumn] assign value  array[countColumn  decrease by  1];
+      :countColumn decrease;
 repeat while(true)
 repeat while (true)
-:return  arr.join(''); 
+:return  array.join(''); 
 stop
 @enduml

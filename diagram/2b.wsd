@@ -1,19 +1,19 @@
 @startuml 
     title findSecondMaxInArray
     start
-    : user input arr;
-    : max = arr[0] ; 
-    : i  =  0  ; 
-    : secondMax = arr[0] ;  
+    : Read array;
+    : max assign value  array[0] ; 
+    : count  assign value   0  ; 
+    : secondMax assign value  array[0] ;  
     repeat 
-    if(arr[i] >  max  ) then (yes)
-        : secondMax =  max  ;
-        : max =  arr[i]  ;  
+    if(array[count] larger than  max  ) then (yes)
+        : secondMax assign value   max  ;
+        : max assign value   array[count]  ;  
     else (no) 
     endif 
-    : i++   ;
-    repeat  while ( i < arr.length ) is(yes)
+    : count increment   ;
+    repeat  while ( count smaller than  array.length ) is(yes)
     -> no ; 
-    :console.log(secondMax);
+    :show the output of(secondMax);
     stop
 @enduml

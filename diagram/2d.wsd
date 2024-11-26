@@ -1,23 +1,23 @@
 @startuml
 start
 title  findPrimesInArray 
-: user input arr;
-: i = 0;
+: Read array;
+: countRow assign value  0;
 repeat
- :  isPrime = true  ; 
-  : j = 2;
+ :  isPrime assign value  true  ; 
+  : countColumn assign value  2;
   repeat
-    if (arr[i] % j == 0) then (yes)
+    if (array[countRow] modulo  countColumn equal to  0) then (yes)
       : break;
     else (no)
     endif
-    : j++;
-  repeat while (j <= Math.floor(arr[i] / 2)) is (yes)
-  if (isPrime  &&  arr[i] > 1) then (yes)
-    : console.log(arr[i]);
+    : countColumn increment;
+  repeat while (countColumn  smaller or equal to Math.floor(array[countRow] divided by 2)) is (yes)
+  if (isPrime  and   array[countRow] larger than 1) then (yes)
+    : show the output of(array[countRow]);
   else (no)
   endif
-  : i++;
-repeat while (i < arr.length) is (yes)
+  : countRow increment;
+repeat while (countRow smaller than  array.length) is (yes)
 stop
 @enduml

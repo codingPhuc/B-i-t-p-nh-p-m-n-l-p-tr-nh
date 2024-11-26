@@ -1,19 +1,19 @@
 @startuml 
 title findSecondMinInArray 
     start
-    : user input arr;
-    : min = arr[i]  ; 
-    : i  =  1 ; 
-    : secondmin = arr[i] ;  
+    : Read array;
+    : min assign value  array[count]  ; 
+    : count  assign value   1 ; 
+    : secondmin assign value  array[count] ;  
     repeat 
-    if(arr[i] <  min  ) then (yes)
-        : secondmin  =  min  ; 
-        : min =  arr[i]  ;  
+    if(array[count] smaller than   min  ) then (yes)
+        : secondmin  assign value   min  ; 
+        : min assign value   array[count]  ;  
     else (no) 
     endif 
-    : i++   ;
-    repeat  while ( i < arr.length ) is(yes)
+    : count increment   ;
+    repeat  while ( count smaller than  array.length ) is(yes)
     -> no ; 
-    :console.log(secondmin);
+    :show the output of(secondmin);
     stop
 @enduml

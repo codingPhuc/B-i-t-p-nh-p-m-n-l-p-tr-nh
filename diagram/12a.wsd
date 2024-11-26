@@ -2,12 +2,12 @@
 @startuml findMaxIn2DArray
 title findMaxIn2DArray
 start
-: user input arr2D  ;
-: max = arr2D[0][0];
-repeat:for (let i = 0; i < arr2D.length; i++)   
-    repeat:for (let j = 0; j < arr2D[0].length; j++)     
-    if (arr2D[i][j] > max) then (yes ) 
-        :max = arr2D[i][j];
+: Read arr2D  ;
+: max assign value  arr2D[0][0];
+repeat:for (let countRow assign value  0; countRow smaller than  arr2D.length; countRow increment)   
+    repeat:for (let countColumn assign value  0; countColumn smaller than  arr2D[0].length; countColumn increment)     
+    if (arr2D[countRow][countColumn] larger than max) then (yes ) 
+        :max assign value  arr2D[countRow][countColumn];
     endif 
 repeat while(true)
 repeat while(true)

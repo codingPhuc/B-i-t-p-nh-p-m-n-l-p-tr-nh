@@ -2,11 +2,11 @@
 @startuml findGreatestCommonDivisor
 title findGreatestCommonDivisor
 start
-: user input a, b;
-repeat:(b  !== 0 )    
-     : temp =   b ; 
-    :b = a % b   ; 
-    : a = temp ; 
+: Read a, b;
+repeat:(b  not equal to  0 )    
+     : temp assign value    b ; 
+    :b assign value  a modulo  b   ; 
+    : a assign value  temp ; 
 repeat while(true)
 : return  a ; 
 stop

@@ -1,13 +1,13 @@
 @startuml 
     title sumOfFirstNNumbers
     start
-    :user input n ;
-    : sum =  0; 
-    : i = 0 ; 
-    repeat: i++ ;
-    : sum  =  sum  + i  ;
-    repeat  while (i <= n) is(yes)
+    :Read number ;
+    : sum assign value   0; 
+    : count assign value  0 ; 
+    repeat: count increment ;
+    : sum  assign value   sum  add count  ;
+    repeat  while (count  smaller or equal to number) is(yes)
     -> no ; 
-    :console.log(sum);
+    :show the output of(sum);
     stop
 @enduml

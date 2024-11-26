@@ -1,8 +1,8 @@
 @startuml CheckPerfectSquare
     title CheckPerfectSquare
     start
-    : user input n; 
-    if (Number.isInteger(Math.sqrt(n))) then (yes)
+    : Read number; 
+    if (Number.isInteger(Math.sqrt(number))) then (yes)
         : return true; 
     endif
      : return false; 

@@ -1,19 +1,19 @@
 // 1a
-function sumOfFirstNNumbers(n) {
+function sumOfFirstNNumbers(number) {
   let sum = 0;
   let i = 1;
-  while (i <= n) {
+  while (i <= number) {
     sum += i;
     i++;
   }
   console.log(sum);
 }
 // 1b
-function SumOfDivisors(n) {
+function sumOfDivisors(number) {
   sum = 0;
   i = 0;
-  while (i <= n) {
-    if (n % i == 0) {
+  while (i <= number) {
+    if (number % i == 0) {
       sum += i;
     }
     i++;
@@ -21,24 +21,24 @@ function SumOfDivisors(n) {
   console.log(sum);
 }
 // 1c
-function SumOfDigits(n) {
+function sumOfDigits(number) {
   sum = 0;
   lastDigit = 0;
-  while (n > 0) {
-    lastDigit = n % 10;
-    n = Math.floor(n / 10);
+  while (number > 0) {
+    lastDigit = number % 10;
+    number = Math.floor(number / 10);
     sum = sum + lastDigit;
   }
   return sum;
 }
 
 // 1d
-function findMaxDigit(n) {
+function findMaxDigit(number) {
   currentDigit = 0;
   max = 0;
-  while (n > 0) {
-    currentDigit = n % 10;
-    n = Math.floor(n / 10);
+  while (number > 0) {
+    currentDigit = number % 10;
+    number = Math.floor(number / 10);
     if (max < currentDigit) {
       max = currentDigit;
     }
@@ -47,24 +47,24 @@ function findMaxDigit(n) {
 }
 // 7
 // 2a
-function findMaxInArray(arr) {
-  let max = arr[0];
+function findMaxInArray(array) {
+  let max = array[0];
   let i = 1;
-  while (i < arr.length) {
-    if (arr[i] > max) {
-      max = arr[i];
+  while (i < array.length) {
+    if (array[i] > max) {
+      max = array[i];
     }
     i++;
   }
   console.log(max);
 }
 // 2b
-function findSecondMaxInArray(arr) {
-  let max = arr[0];
+function findSecondMaxInArray(array) {
+  let max = array[0];
   let i = 0;
-  let secondMax = arr[0];
-  while (i < arr.length) {
-    if (arr[i] > max) {
+  let secondMax = array[0];
+  while (i < array.length) {
+    if (array[i] > max) {
       secondMax = max;
     }
     i++;
@@ -72,55 +72,55 @@ function findSecondMaxInArray(arr) {
   console.log(secondMax);
 }
 // 2c
-function findSecondMinInArray(arr) {
-  let min = arr[0];
+function findSecondMinInArray(array) {
+  let min = array[0];
   let i = 1;
-  let secondMin = arr[0];
-  while (i < arr.length) {
-    if (arr[i] < min) {
+  let secondMin = array[0];
+  while (i < array.length) {
+    if (array[i] < min) {
       secondMin = min;
-      min = arr;
+      min = array;
     }
     i++;
   }
   console.log(secondMin);
 }
 // 2d
-function findPrimesInArray(arr) {
+function findPrimesInArray(array) {
   let i = 0;
-  while (i < arr.length) {
+  while (i < array.length) {
     j = 2;
     let isPrime = true;
-    while (j <= Math.floor(arr[i] / 2)) {
-      if (arr[i] % j == 0) {
+    while (j <= Math.floor(array[i] / 2)) {
+      if (array[i] % j == 0) {
         isPrime = false;
         break;
       }
       j++;
     }
-    if (isPrime && arr[i] > 1) {
-      console.log(arr[i]);
+    if (isPrime && array[i] > 1) {
+      console.log(array[i]);
     }
     i++;
   }
 }
 // 3a
-function primeNumberCheckAlgorithm(n) {
-  if (n <= 1) return false;
+function primeNumberCheckAlgorithm(number) {
+  if (number <= 1) return false;
   let i = 2;
-  while (i <= Math.floor(n / 2)) {
-    if (n % i == 0) return false;
+  while (i <= Math.floor(number / 2)) {
+    if (number % i == 0) return false;
     i++;
   }
   return true;
 }
 // 3b
-function CheckPerfectNumber(n) {
+function CheckPerfectNumber(number) {
   let i = 1;
   let perfectNumber = 0;
-  while (perfectNumber < n) {
+  while (perfectNumber < number) {
     perfectNumber = Math.pow(2, i - 1) * (Math.pow(2, i) - 1);
-    if (perfectNumber == n) {
+    if (perfectNumber == number) {
       return true;
     }
     i++;
@@ -128,16 +128,16 @@ function CheckPerfectNumber(n) {
   return false;
 }
 //  3c
-function CheckPerfectSquare(n) {
-  if (Number.isInteger(Math.sqrt(n))) {
+function CheckPerfectSquare(number) {
+  if (Number.isInteger(Math.sqrt(number))) {
     return true;
   }
   return false;
 }
-function printFibonacciSequence(n) {
+function printFibonacciSequence(number) {
   i = 0;
   j = 1;
-  while (i <= n) {
+  while (i <= number) {
     console.log(i);
     temp = i + j;
     i = j;
@@ -145,9 +145,9 @@ function printFibonacciSequence(n) {
   }
 }
 // 3d
-function printPrimesUpToN(n) {
+function printPrimesUpToN(number) {
   let i = 1;
-  while (i <= n) {
+  while (i <= number) {
     j = 2;
     while (j <= Math.floor(i / 2)) {
       if (i % j == 0) {
@@ -212,44 +212,44 @@ function findLongestPalindromicSubstring(str) {
   return longestPalindromic;
 }
 //  5
-function bubbleSort(arr) {
-  for (let i = 0; i < arr.length - 1; i++) {
-    for (let j = i; j < arr.length - i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        let temp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = temp;
+function bubbleSort(array) {
+  for (let i = 0; i < array.length - 1; i++) {
+    for (let j = i; j < array.length - i - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        let temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
       }
     }
   }
-  return arr;
+  return array;
 }
 // 6a
-function calculateAndPrintFactorial(n) {
+function calculateAndPrintFactorial(number) {
   i = 1;
   nFactorial = 1;
-  while (i <= n) {
+  while (i <= number) {
     nFactorial *= i;
     i++;
   }
   console.log(nFactorial);
 }
 // 6b
-function calculateAndPrintSumOfDigits(n) {
+function calculateAndPrintSumOfDigits(number) {
   let nSum = 0;
-  let temp = n;
-  while (n > 0) {
-    nSum = nSum + (n % 10);
-    n = Math.floor(n / 10);
+  let temp = number;
+  while (number > 0) {
+    nSum = nSum + (number % 10);
+    number = Math.floor(number / 10);
   }
   console.log(nSum);
 }
 
 //7
-function printFirstnFibonacciNumbers(n) {
+function printFirstnFibonacciNumbers(number) {
   let i = 0;
   let j = 1;
-  while (i <= n) {
+  while (i <= number) {
     temp = i + j;
     console.log(i);
     i = j;
@@ -357,18 +357,18 @@ function findLongestIncreasingAndDecreasingSubsequence(str) {
 
 // 9b
 function sortString(str) {
-  let arr = str.split("");
+  let array = str.split("");
 
-  for (let i = 1; i < arr.length; i++) {
-    let temp = arr[i];
+  for (let i = 1; i < array.length; i++) {
+    let temp = array[i];
     let j = i;
-    while (j > 0 && temp < arr[j - 1]) {
-      arr[j] = arr[j - 1];
+    while (j > 0 && temp < array[j - 1]) {
+      array[j] = array[j - 1];
       j--;
     }
-    arr[j] = temp;
+    array[j] = temp;
   }
-  return arr.join("");
+  return array.join("");
 }
 
 // 10a
@@ -403,10 +403,10 @@ function findLeastCommonMultiple(a, b) {
 }
 
 // 11a
-function findMaxIndex(arr) {
+function findMaxIndex(array) {
   let maxIndex = 0;
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > arr[maxIndex]) {
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] > array[maxIndex]) {
       maxIndex = i;
     }
   }
@@ -414,20 +414,20 @@ function findMaxIndex(arr) {
 }
 
 // 11b
-function findMinIndex(arr) {
+function findMinIndex(array) {
   let minIndex = 0;
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] < arr[minIndex]) {
+  for (let i = 1; i < array.length; i++) {
+    if (array[i] < array[minIndex]) {
       minIndex = i;
     }
   }
   return minIndex;
 }
 // 11c
-function findSum(arr) {
+function findSum(array) {
   let sumArr = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sumArr += arr[i];
+  for (let i = 0; i < array.length; i++) {
+    sumArr += array[i];
   }
   return sumArr;
 }
@@ -485,15 +485,15 @@ function findPrimesIn2DArray(arr2D) {
 console.log("Calling sumOfFirstNNumbers with argument 5");
 sumOfFirstNNumbers(5); // Expected output: 15
 
-// Test cases for SumOfDivisors
-console.log("Calling SumOfDivisors with argument 6");
-SumOfDivisors(6); // Expected output: 12 (1 + 2 + 3 + 6)
+// Test cases for sumOfDivisors
+console.log("Calling sumOfDivisors with argument 6");
+sumOfDivisors(6); // Expected output: 12 (1 + 2 + 3 + 6)
 
-// Test cases for SumOfDigits
-console.log("Calling SumOfDigits with argument 123");
-console.assert(SumOfDigits(123) === 6, "Test Case 1 Failed"); // 1 + 2 + 3 = 6
-console.log("Calling SumOfDigits with argument 456");
-console.assert(SumOfDigits(456) === 15, "Test Case 2 Failed"); // 4 + 5 + 6 = 15
+// Test cases for sumOfDigits
+console.log("Calling sumOfDigits with argument 123");
+console.assert(sumOfDigits(123) === 6, "Test Case 1 Failed"); // 1 + 2 + 3 = 6
+console.log("Calling sumOfDigits with argument 456");
+console.assert(sumOfDigits(456) === 15, "Test Case 2 Failed"); // 4 + 5 + 6 = 15
 
 // Test cases for findMaxDigit
 console.log("Calling findMaxDigit with argument 12345");
@@ -685,7 +685,7 @@ console.assert(
     true
   ) === 3,
   "Test Case 1 Failed"
-); // Sum of first row
+); // sum of first row
 console.log("Calling sumRowOrColumn with argument [[1, 2], [3, 4]], 0, false");
 console.assert(
   sumRowOrColumn(
@@ -697,7 +697,7 @@ console.assert(
     false
   ) === 4,
   "Test Case 2 Failed"
-); // Sum of first column
+); // sum of first column
 
 // Test cases for findPrimesIn2DArray
 console.log("Calling findPrimesIn2DArray with argument [[1, 2], [3, 4]]");

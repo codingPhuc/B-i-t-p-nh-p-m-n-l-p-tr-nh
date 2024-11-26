@@ -2,23 +2,23 @@
 @startuml findGreatestCommonDivisor
 title findLeastCommonMultiple
 start
-: user input a, b;
-: i  =  2 ; 
-:  leastCommonMul = 1;    
-repeat: while (a != 1 && b != 1) 
-if ( primeNumberCheckAlgorithm(i) ) then ( yes)
-    repeat :  (a % i == 0  || b % i  == 0)    
-    if ( a % i  ==  0 ) 
-      :a = Math.floor(a / i);
+: Read a, b;
+: count  assign value   2 ; 
+:  leastCommonMul assign value  1;    
+repeat: while (a not equal to 1 and  b not equal to 1) 
+if ( primeNumberCheckAlgorithm(count) ) then ( yes)
+    repeat :  (a modulo  count equal to  0  or b modulo  count  equal to  0)    
+    if ( a modulo  count  equal to   0 ) 
+      :a assign value  Math.floor(a divided by count);
     endif  
-    if(b %  i  == 0  ) 
-      :b = Math.floor(b / i);
+    if(b modulo   count  equal to  0  ) 
+      :b assign value  Math.floor(b divided by count);
     endif
-    :leastCommonMul *= i; 
+    :leastCommonMul *= count; 
     repeat  while (true)   
 
 endif  
-:i++   ; 
+:count increment   ; 
 repeat while (true)
 stop
 @enduml

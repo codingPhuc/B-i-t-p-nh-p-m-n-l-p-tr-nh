@@ -2,11 +2,11 @@
 @startuml findMaxIndex
 title findMaxIndex
 start
-: user input arr  ;
-: maxIndex =    0 ;  
-repeat:(for (let i = 1; i < arr.length; i++) )    
-      if( arr[i] > arr[maxIndex]) then (yes)
-        : maxIndex = i; 
+: Read array  ;
+: maxIndex assign value     0 ;  
+repeat:(for (let count assign value  1; count smaller than  array.length; count increment) )    
+      if( array[count] larger than array[maxIndex]) then (yes)
+        : maxIndex assign value  count; 
       endif 
 repeat while(true)
 :  return maxIndex; 

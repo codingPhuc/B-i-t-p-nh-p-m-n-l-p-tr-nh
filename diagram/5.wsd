@@ -1,20 +1,20 @@
 @startuml
 title bubbleSort
 start
-: user input arr;
-: i = 0;
+: Read array;
+: countRow assign value  0;
 repeat
-  : j = i;
+  : countColumn assign value  countRow;
   repeat
-    if (arr[j] > arr[j + 1]) then (yes)
-      : temp = arr[j];
-      : arr[j] = arr[j + 1];
-      : arr[j + 1] = temp;
+    if (array[countColumn] larger than array[countColumn add  1]) then (yes)
+      : temp assign value  array[countColumn];
+      : array[countColumn] assign value  array[countColumn add  1];
+      : array[countColumn add  1] assign value  temp;
     endif
-    : j++;
-  repeat while (j < arr.length - i - 1) is (yes)
-  : i++;
-repeat while (i < arr.length - 1) is (yes)
-: return arr;
+    : countColumn increment;
+  repeat while (countColumn smaller than  array.length  decrease by  countRow  decrease by  1) is (yes)
+  : countRow increment;
+repeat while (countRow smaller than  array.length  decrease by  1) is (yes)
+: return array;
 stop
 @enduml

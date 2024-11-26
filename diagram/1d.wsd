@@ -1,16 +1,16 @@
 @startuml   
     title  findMaxDigit
     start
-    : user input n;
-    : currentDigit = 0  ; 
-    : max  =  0  ;  
-    repeat: currentDigit  =  n % 10;
-    : n  = Math.floor (n  / 10)  ; 
-    if(max  < currentDigit ) then (yes)
-        : max =  currentDigit  ; 
+    : Read number;
+    : currentDigit assign value  0  ; 
+    : max  assign value   0  ;  
+    repeat: currentDigit  assign value   number modulo  10;
+    : number  assign value  Math.floor (number  divided by 10)  ; 
+    if(max  smaller than  currentDigit ) then (yes)
+        : max assign value   currentDigit  ; 
     else (no) 
     endif 
-    repeat  while (n > 0 ) is(yes)
+    repeat  while (number > 0 ) is(yes)
     -> no ; 
     :show user result output;
     stop

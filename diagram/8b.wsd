@@ -1,18 +1,18 @@
 @startuml countCharOccurrences
 title countCharOccurrences
 start
-: user input str;
-: user input charToFind;
-: str = str.toLowerCase();
-: arrStr =  str.split('') ;
-: numberOfRepeat = 0;
-: i = 0;
+: Read stringArray;
+: Read charToFind;
+: stringArray assign value  stringArray.toLowerCase();
+: arrStr assign value   stringArray.split('') ;
+: numberOfRepeat assign value  0;
+: count assign value  0;
 repeat 
-  if (arrStr[i] == charToFind) then (yes)
-    : numberOfRepeat++;
+  if (arrStr[count] equal to  charToFind) then (yes)
+    : numberOfRepeat increment;
   endif
-  : i++;
-repeat while (i < arrStr.length)
-: console.log(numberOfRepeat);
+  : count increment;
+repeat while (count smaller than  arrStr.length)
+: show the output of(numberOfRepeat);
 stop
 @enduml

@@ -2,10 +2,10 @@
 @startuml findSum
 title findSum
 start
-: user input arr  ;
-: sumArr = 0; 
-repeat:(for (let i = 0; i < arr.length; i++)  )    
-    :sumArr += arr[i]; 
+: Read array  ;
+: sumArr assign value  0; 
+repeat:(for (let count assign value  0; count smaller than  array.length; count increment)  )    
+    :sumArr increment by  array[count]; 
 repeat while(true)
 :  return sumArr; 
 stop

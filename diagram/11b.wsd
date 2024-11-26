@@ -2,11 +2,11 @@
 @startuml findMinIndex
 title findMinIndex
 start
-: user input arr  ;
-: minIndex =    0 ;  
-repeat:(for (let i = 1; i < arr.length; i++) )    
-      if( arr[i] <  arr[minIndex]) then (yes)
-        : minIndex = i; 
+: Read array  ;
+: minIndex assign value     0 ;  
+repeat:(for (let count assign value  1; count smaller than  array.length; count increment) )    
+      if( array[count] smaller than   array[minIndex]) then (yes)
+        : minIndex assign value  count; 
       endif 
 repeat while(true)
 :  return minIndex; 

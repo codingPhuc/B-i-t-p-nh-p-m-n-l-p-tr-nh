@@ -3,10 +3,10 @@
 @startuml.
 title checkPalindromeString
 start
-: user input str;
+: Read stringArray;
 
-: reverseStr = reverseString(str) ; 
-if ( reverseStr  ==  str)  then (yes)
+: reverseStr assign value  reverseString(stringArray) ; 
+if ( reverseStr  equal to   stringArray)  then (yes)
 : return true ;  
 endif
 :  return false  ; 

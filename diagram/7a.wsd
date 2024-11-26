@@ -1,14 +1,14 @@
 @startuml
 title printFirstnFibonacciNumbers.
 start
-: user input n;
-: i = 0 ;
-: j =  1 ;
+: Read number;
+: countRow assign value  0 ;
+: countColumn assign value   1 ;
 repeat
-: temp  =  i + j   ;
-: console.log(i )  ;
-: i  =  j  ; 
-: j = temp  ; 
-repeat while ( i <= n )
+: temp  assign value   countRow add  countColumn   ;
+: show the output of(countRow )  ;
+: countRow  assign value   countColumn  ; 
+: countColumn assign value  temp  ; 
+repeat while ( countRow  smaller or equal to number )
 stop
 @enduml

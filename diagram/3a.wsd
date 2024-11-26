@@ -1,18 +1,18 @@
 @startuml
     title primeNumberCheckAlgorithm
     start
-    : user input n;  
-    if(n <=1) then (yes) 
+    : Read number;  
+    if(number  smaller or equal to1) then (yes) 
     : return false  ;
     endif 
-    : i = 2  ;  
+    : count assign value  2  ;  
     repeat 
-    if(n  % i  == 0  ) then (yes)
+    if(number  modulo  count  equal to  0  ) then (yes)
         : return false ;  
     else (no) 
     endif 
-    : i++   ;
-    repeat  while ( i <= Math.floor(n/2) ) is(yes)
+    : count increment   ;
+    repeat  while ( count  smaller or equal to Math.floor(numberdivided by2) ) is(yes)
     -> no ; 
     : return true;
     stop

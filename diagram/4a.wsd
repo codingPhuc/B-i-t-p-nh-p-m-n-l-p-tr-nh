@@ -2,14 +2,14 @@
 @startuml.
 title reverseString
 start
-: user input str;
-: arrStr =  str.split('') ;
-: i = arrStr.length - 1 ;
-: reverseStr = '' ; 
+: Read stringArray;
+: arrStr assign value   stringArray.split('') ;
+: count assign value  arrStr.length  decrease by  1 ;
+: reverseStr assign value  '' ; 
 repeat
- : reverseStr  +=  arrStr[i]   ;  
-  :i--  ; 
-repeat while (i >0 ) is (yes)
+ : reverseStr  add assign value   arrStr[count]   ;  
+  :count decrease  ; 
+repeat while (count larger than 0 ) is (yes)
 : return  reverseStr ; 
 stop
 @enduml
