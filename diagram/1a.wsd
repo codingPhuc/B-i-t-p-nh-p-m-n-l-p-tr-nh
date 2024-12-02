@@ -5,7 +5,7 @@
     : sum assign value   0; 
     : count assign value  0 ; 
     repeat: count increment ;
-    : sum  assign value   sum  add count  ;
+    :   sum  add count  assign value to sum ;
     repeat  while (count  smaller or equal to number) is(yes)
     -> no ; 
     :show the output of(sum);

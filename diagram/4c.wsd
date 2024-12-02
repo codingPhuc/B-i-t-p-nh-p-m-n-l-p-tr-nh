@@ -5,8 +5,8 @@ title checkPalindromeString
 start
 : Read stringArray;
 
-: reverseStr assign value  reverseString(stringArray) ; 
-if ( reverseStr  equal to   stringArray)  then (yes)
+: reverseString assign value  reverseString(stringArray) ; 
+if ( reverseString  equal to   stringArray)  then (yes)
 : return true ;  
 endif
 :  return false  ; 

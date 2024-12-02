@@ -13,4 +13,4 @@ repeat while(true)
 repeat while(true)
 :  return min; 
 stop
-@enduml
+@endumld

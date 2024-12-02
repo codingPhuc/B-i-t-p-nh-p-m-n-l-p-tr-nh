@@ -1,11 +1,11 @@
 @startuml 
-    title   SumOfDigits 
+    title   sumOfDigits 
     start
     :Read  number;
     : sum assign value   0; 
-    repeat: lastDigit  assign value   number modulo  10;
-    : number  assign value  Math.floor (number  divided by 10)  ; 
-    : sum  assign value   sum  add lastDigit  ;
+    repeat:     number modulo  10 assign value  to lastDigit;
+    :  Math.floor (number  divided by 10)  assign value to number ; 
+    :   sum  add lastDigit  assign value to sum ;
     repeat  while (number larger than 0 ) is(yes)
     -> no ; 
     :show the output of(sum);

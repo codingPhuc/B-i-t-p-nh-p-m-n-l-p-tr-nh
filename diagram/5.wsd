@@ -12,7 +12,7 @@ repeat
       : array[countColumn add  1] assign value  temp;
     endif
     : countColumn increment;
-  repeat while (countColumn smaller than  array.length  decrease by  countRow  decrease by  1) is (yes)
+  repeat while (countColumn smaller than  (array.length  decrease by  countRow  decrease by  1)) is (yes)
   : countRow increment;
 repeat while (countRow smaller than  array.length  decrease by  1) is (yes)
 : return array;

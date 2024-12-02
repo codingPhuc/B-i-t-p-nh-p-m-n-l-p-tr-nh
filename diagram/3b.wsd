@@ -1,5 +1,5 @@
 @startuml 
-    title CheckPerfectNumber
+    title checkPerfectNumber
     start
     : Read number; 
     : count assign value  1 ;  

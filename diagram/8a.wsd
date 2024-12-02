@@ -3,16 +3,16 @@ title countVowelsInString
 start
 : Read stringArray;
 : stringArray assign value  stringArray.toLowerCase();
-: arrStr assign value  stringArray.split();
+: arrayString assign value  stringArray.split();
 : vowels assign value  ['a', 'e', 'count', 'o', 'u'];
 : numberOfVowels assign value  0;
 : count assign value  0;
 repeat
-if (vowels.includes(arrStr[count])) then (yes)
+if (vowels.includes(arrayString[count])) then (yes)
     : numberOfVowels increment;
 endif
 : count increment;
-repeat while (count smaller than  arrStr.length)
+repeat while (count smaller than  arrayString.length)
 : show the output of(numberOfVowels);
 stop
 @enduml

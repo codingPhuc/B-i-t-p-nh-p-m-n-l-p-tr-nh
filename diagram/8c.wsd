@@ -3,19 +3,19 @@ title findMostFrequentChars
 start
 : Read stringArray;
 : stringArray assign value  stringArray.toLowerCase();
-: arrStr assign value   stringArray.split("");
+: arrayString assign value   stringArray.split("");
 : MaxCount assign value  0; 
 : charDict assign value  {};
 : result assign value  [];
 : count assign value  0;
 repeat
-if (arrStr[count] in charDict) then (yes)
-    : charDict[arrStr[count]] increment by  1;
+if (arrayString[count] in charDict) then (yes)
+    : charDict[arrayString[count]] increment by  1;
 else (no)
-    : charDict[arrStr[count]] assign value  1;
+    : charDict[arrayString[count]] assign value  1;
 endif
 : count increment;
-repeat while (count smaller than  arrStr.length)
+repeat while (count smaller than  arrayString.length)
 
 repeat : (key in charDict.keys())
 if (charDict[key] larger than MaxCount) then (yes)

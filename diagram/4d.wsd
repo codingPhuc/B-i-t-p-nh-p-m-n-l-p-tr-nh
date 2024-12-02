@@ -9,7 +9,7 @@ repeat
   : substring assign value  '';
   repeat
     : substring assign value  stringArray.substring(countRow, countColumn add  1);
-    if(checkPalindromeString(substring) and  substring.length larger than longestPalindromic.length) then (yes)
+    if((checkPalindromeString(substring) and  substring.length) larger than longestPalindromic.length) then (yes)
         : longestPalindromic assign value  substring;
     endif 
     : countColumn increment;

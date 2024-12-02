@@ -115,7 +115,7 @@ function primeNumberCheckAlgorithm(number) {
   return true;
 }
 // 3b
-function CheckPerfectNumber(number) {
+function checkPerfectNumber(number) {
   let i = 1;
   let perfectNumber = 0;
   while (perfectNumber < number) {
@@ -128,7 +128,7 @@ function CheckPerfectNumber(number) {
   return false;
 }
 //  3c
-function CheckPerfectSquare(number) {
+function checkPerfectSquare(number) {
   if (Number.isInteger(Math.sqrt(number))) {
     return true;
   }
@@ -162,45 +162,45 @@ function printPrimesUpToN(number) {
   }
 }
 // 4a
-function reverseString(str) {
-  let arrStr = str.split("");
-  let i = arrStr.length - 1;
-  let reverseStr = "";
+function reverseString(string) {
+  let arrayString = string.split("");
+  let i = arrayString.length - 1;
+  let reverseString = "";
   while (i >= 0) {
-    reverseStr += arrStr[i];
+    reverseString += arrayString[i];
     i--;
   }
-  // console.log(reverseStr);
-  return reverseStr;
+  // console.log(reverseString);
+  return reverseString;
 }
 // 4b
-function RemoveWhitespaceFromString(str) {
-  let arrStr = str.split("");
+function removeWhitespaceFromString(string) {
+  let arrayString = string.split("");
   let i = 0;
-  let noSpaceStr = "";
-  while (i < arrStr.length) {
-    if (arrStr[i] != " ") {
-      noSpaceStr += arrStr[i];
+  let noSpaceString = "";
+  while (i < arrayString.length) {
+    if (arrayString[i] != " ") {
+      noSpaceString += arrayString[i];
     }
     i++;
   }
 
-  return noSpaceStr;
+  return noSpaceString;
 }
 // 4c
-function checkPalindromeString(str) {
-  let reverseStr = reverseString(str);
-  if (reverseStr == str) {
+function checkPalindromeString(string) {
+  let stringReverse = reverseString(string);
+  if (stringReverse == string) {
     return true;
   }
   return false;
 }
 // 4d
-function findLongestPalindromicSubstring(str) {
+function findLongestPalindromicSubstring(string) {
   let longestPalindromic = "";
-  for (let i = 0; i < str.length; i++) {
-    for (let j = i; j < str.length; j++) {
-      let substring = str.substring(i, j + 1);
+  for (let i = 0; i < string.length; i++) {
+    for (let j = i; j < string.length; j++) {
+      let substring = string.substring(i, j + 1);
       if (
         checkPalindromeString(substring) &&
         substring.length > longestPalindromic.length
@@ -237,7 +237,7 @@ function calculateAndPrintFactorial(number) {
 // 6b
 function calculateAndPrintSumOfDigits(number) {
   let nSum = 0;
-  let temp = number;
+  // let temp = number;
   while (number > 0) {
     nSum = nSum + (number % 10);
     number = Math.floor(number / 10);
@@ -257,14 +257,14 @@ function printFirstnFibonacciNumbers(number) {
   }
 }
 // 8a
-function countVowelsInString(str) {
-  str = str.toLowerCase();
-  let arrStr = str.split();
+function countVowelsInString(string) {
+  string = string.toLowerCase();
+  let arrayString = string.split();
   let vowels = ["a", "e", "i", "o", "u"];
   let numberOfVowels = 0;
   let i = 0;
-  while (i < arrStr.length) {
-    if (vowels.includes(arrStr[i])) {
+  while (i < arrayString.length) {
+    if (vowels.includes(arrayString[i])) {
       numberOfVowels++;
     }
     i++;
@@ -272,13 +272,13 @@ function countVowelsInString(str) {
   console.log(numberOfVowels);
 }
 //  8b
-function countCharOccurrences(str, charToFind) {
-  str = str.toLowerCase();
-  let arrStr = str.split("");
+function countCharOccurrences(string, charToFind) {
+  string = string.toLowerCase();
+  let arrayString = string.split("");
   let numberOfRepeat = 0;
   let i = 0;
-  while (i < arrStr.length) {
-    if (arrStr[i] == charToFind) {
+  while (i < arrayString.length) {
+    if (arrayString[i] == charToFind) {
       numberOfRepeat++;
     }
     i++;
@@ -286,18 +286,18 @@ function countCharOccurrences(str, charToFind) {
   console.log(numberOfRepeat);
 }
 // 8c
-function findMostFrequentChars(str) {
-  str = str.toLowerCase();
-  let arrStr = str.split("");
+function findMostFrequentChars(string) {
+  string = string.toLowerCase();
+  let arrayString = string.split("");
   let MaxCount = 0;
   let charDict = {};
   let result = [];
   let i = 0;
-  while (i < arrStr.length) {
-    if (arrStr[i] in charDict) {
-      charDict[arrStr[i]] += 1;
+  while (i < arrayString.length) {
+    if (arrayString[i] in charDict) {
+      charDict[arrayString[i]] += 1;
     } else {
-      charDict[arrStr[i]] = 1;
+      charDict[arrayString[i]] = 1;
     }
     i++;
   }
@@ -314,34 +314,34 @@ function findMostFrequentChars(str) {
   return result;
 }
 //  9a
-function findLongestIncreasingAndDecreasingSubsequence(str) {
+function findLongestIncreasingAndDecreasingSubsequence(string) {
   let maxIncreasingSub = "";
   let maxDecreasingSub = "";
 
-  for (let i = 0; i < str.length; i++) {
-    let increasingSub = str[i];
-    let decreasingSub = str[i];
-    for (let j = i; j < str.length - 1; j++) {
-      if (str[j] < str[j + 1]) {
-        increasingSub += str[j + 1];
+  for (let i = 0; i < string.length; i++) {
+    let increasingSub = string[i];
+    let decreasingSub = string[i];
+    for (let j = i; j < string.length - 1; j++) {
+      if (string[j] < string[j + 1]) {
+        increasingSub += string[j + 1];
       } else {
         if (maxIncreasingSub.length < increasingSub.length) {
           maxIncreasingSub = increasingSub;
         }
-        increasingSub = str[j + 1];
+        increasingSub = string[j + 1];
       }
     }
     if (maxIncreasingSub.length < increasingSub.length) {
       maxIncreasingSub = increasingSub;
     }
-    for (let j = i; j < str.length - 1; j++) {
-      if (str[j] > str[j + 1]) {
-        decreasingSub += str[j + 1];
+    for (let j = i; j < string.length - 1; j++) {
+      if (string[j] > string[j + 1]) {
+        decreasingSub += string[j + 1];
       } else {
         if (maxDecreasingSub.length < decreasingSub.length) {
           maxDecreasingSub = decreasingSub;
         }
-        decreasingSub = str[j + 1];
+        decreasingSub = string[j + 1];
       }
     }
     if (maxDecreasingSub.length < decreasingSub.length) {
@@ -356,8 +356,8 @@ function findLongestIncreasingAndDecreasingSubsequence(str) {
 }
 
 // 9b
-function sortString(str) {
-  let array = str.split("");
+function sortString(string) {
+  let array = string.split("");
 
   for (let i = 1; i < array.length; i++) {
     let temp = array[i];
@@ -525,19 +525,19 @@ console.assert(primeNumberCheckAlgorithm(5) === true, "Test Case 1 Failed");
 console.log("Calling primeNumberCheckAlgorithm with argument 4");
 console.assert(primeNumberCheckAlgorithm(4) === false, "Test Case 2 Failed");
 
-// Test cases for CheckPerfectNumber
-console.log("Calling CheckPerfectNumber with argument 6");
-console.assert(CheckPerfectNumber(6) === true, "Test Case 1 Failed");
-console.log("Calling CheckPerfectNumber with argument 28");
-console.assert(CheckPerfectNumber(28) === true, "Test Case 2 Failed");
-console.log("Calling CheckPerfectNumber with argument 12");
-console.assert(CheckPerfectNumber(12) === false, "Test Case 3 Failed");
+// Test cases for checkPerfectNumber
+console.log("Calling checkPerfectNumber with argument 6");
+console.assert(checkPerfectNumber(6) === true, "Test Case 1 Failed");
+console.log("Calling checkPerfectNumber with argument 28");
+console.assert(checkPerfectNumber(28) === true, "Test Case 2 Failed");
+console.log("Calling checkPerfectNumber with argument 12");
+console.assert(checkPerfectNumber(12) === false, "Test Case 3 Failed");
 
-// Test cases for CheckPerfectSquare
-console.log("Calling CheckPerfectSquare with argument 4");
-console.assert(CheckPerfectSquare(4) === true, "Test Case 1 Failed");
-console.log("Calling CheckPerfectSquare with argument 5");
-console.assert(CheckPerfectSquare(5) === false, "Test Case 2 Failed");
+// Test cases for checkPerfectSquare
+console.log("Calling checkPerfectSquare with argument 4");
+console.assert(checkPerfectSquare(4) === true, "Test Case 1 Failed");
+console.log("Calling checkPerfectSquare with argument 5");
+console.assert(checkPerfectSquare(5) === false, "Test Case 2 Failed");
 
 // Test cases for printFibonacciSequence
 console.log("Calling printFibonacciSequence with argument 5");
@@ -553,15 +553,15 @@ console.assert(reverseString("hello") === "olleh", "Test Case 1 Failed");
 console.log("Calling reverseString with argument 'world'");
 console.assert(reverseString("world") === "dlrow", "Test Case 2 Failed");
 
-// Test cases for RemoveWhitespaceFromString
-console.log("Calling RemoveWhitespaceFromString with argument 'hello world'");
+// Test cases for removeWhitespaceFromString
+console.log("Calling removeWhitespaceFromString with argument 'hello world'");
 console.assert(
-  RemoveWhitespaceFromString("hello world") === "helloworld",
+  removeWhitespaceFromString("hello world") === "helloworld",
   "Test Case 1 Failed"
 );
-console.log("Calling RemoveWhitespaceFromString with argument ' a b c '");
+console.log("Calling removeWhitespaceFromString with argument ' a b c '");
 console.assert(
-  RemoveWhitespaceFromString(" a b c ") === "abc",
+  removeWhitespaceFromString(" a b c ") === "abc",
   "Test Case 2 Failed"
 );
 

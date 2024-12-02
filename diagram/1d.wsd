@@ -4,8 +4,8 @@
     : Read number;
     : currentDigit assign value  0  ; 
     : max  assign value   0  ;  
-    repeat: currentDigit  assign value   number modulo  10;
-    : number  assign value  Math.floor (number  divided by 10)  ; 
+    repeat:  number modulo  10 assign value to currentDigit;
+    :   Math.floor (nudmber  divided by 10)  assign value to number  ; 
     if(max  smaller than  currentDigit ) then (yes)
         : max assign value   currentDigit  ; 
     else (no) 

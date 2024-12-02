@@ -5,7 +5,7 @@ start
 : count assign value  1;
 : nFactorial assign value  1; 
 repeat
-: nFactorial assign value  nFactorial * count; 
+:  nFactorial multiply by  count assign value to nFactorial; 
 : count increment;
 repeat while (count  smaller or equal to number)
 : show the output of(nFactorial);

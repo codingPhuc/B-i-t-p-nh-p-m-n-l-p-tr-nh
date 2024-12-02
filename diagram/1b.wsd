@@ -6,7 +6,7 @@ title  sumOfDivisors
     : count assign value  0 ; 
     repeat: count increment ;
     if(number  modulo  count equal to  0) then (yes)
-        : sum  assign value   sum  add count  ;
+        :    sum  add count  assign value to sum ;
     else (no) 
     endif
     repeat  while (count  smaller or equal to number) is(yes) 

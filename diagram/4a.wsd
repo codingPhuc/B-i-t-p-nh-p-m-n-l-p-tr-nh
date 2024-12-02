@@ -3,13 +3,13 @@
 title reverseString
 start
 : Read stringArray;
-: arrStr assign value   stringArray.split('') ;
-: count assign value  arrStr.length  decrease by  1 ;
-: reverseStr assign value  '' ; 
+: arrayString assign value   stringArray.split('') ;
+:    arrayString.length  decrease by  1  assign value to count;
+: reverseString assign value "" ; 
 repeat
- : reverseStr  add assign value   arrStr[count]   ;  
+ : reverseString  add assign value   arrayString[count]   ;  
   :count decrease  ; 
 repeat while (count larger than 0 ) is (yes)
-: return  reverseStr ; 
+: return  reverseString ; 
 stop
 @enduml

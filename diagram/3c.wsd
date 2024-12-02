@@ -1,5 +1,5 @@
 @startuml CheckPerfectSquare
-    title CheckPerfectSquare
+    title checkPerfectSquare
     start
     : Read number; 
     if (Number.isInteger(Math.sqrt(number))) then (yes)

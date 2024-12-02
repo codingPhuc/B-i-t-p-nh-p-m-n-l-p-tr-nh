@@ -5,7 +5,7 @@ start
 : countRow assign value  0 ;
 : countColumn assign value   1 ;
 repeat
-: temp  assign value   countRow add  countColumn   ;
+:   countRow add  countColumn   to temp ;
 : show the output of(countRow )  ;
 : countRow  assign value   countColumn  ; 
 : countColumn assign value  temp  ; 

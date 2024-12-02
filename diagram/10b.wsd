@@ -14,7 +14,7 @@ if ( primeNumberCheckAlgorithm(count) ) then ( yes)
     if(b modulo   count  equal to  0  ) 
       :b assign value  Math.floor(b divided by count);
     endif
-    :leastCommonMul *= count; 
+    : leastCommonMul multiply by  count assign value to leastCommonMul; 
     repeat  while (true)   
 
 endif  

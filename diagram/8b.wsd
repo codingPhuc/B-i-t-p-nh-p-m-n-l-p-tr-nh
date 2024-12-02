@@ -4,15 +4,15 @@ start
 : Read stringArray;
 : Read charToFind;
 : stringArray assign value  stringArray.toLowerCase();
-: arrStr assign value   stringArray.split('') ;
+: arrayString assign value   stringArray.split('') ;
 : numberOfRepeat assign value  0;
 : count assign value  0;
 repeat 
-  if (arrStr[count] equal to  charToFind) then (yes)
+  if (arrayString[count] equal to  charToFind) then (yes)
     : numberOfRepeat increment;
   endif
   : count increment;
-repeat while (count smaller than  arrStr.length)
+repeat while (count smaller than  arrayString.length)
 : show the output of(numberOfRepeat);
 stop
 @enduml

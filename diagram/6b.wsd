@@ -4,8 +4,8 @@ start
 : Read number;
 : nSum assign value  0;
 repeat 
-  : nSum assign value  nSum add  (number modulo  10);
-  : number assign value  Math.floor(number divided by 10);
+  :   nSum add  (number modulo  10) assign value to nSum;
+  :  Math.floor(number divided by 10) assign value to number;
 repeat while (number larger than 0)
 : show the output of(nSum);
 stop
